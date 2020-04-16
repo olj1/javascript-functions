@@ -22,7 +22,9 @@ return result;
 }
 
 // The game state to search for `cell` is passed as the `this` value of the function.
-function contains(cell) {}
+function contains(cell) {
+
+}
 
 const printCell = (cell, state) => {};
 
@@ -93,6 +95,3 @@ const startPatterns = {
   exports.startPatterns = startPatterns;
   exports.iterate = iterate;
   exports.main = main;
-
-  seed(1,2,3);
-  // console.log("same function: ", same([1,3],[1,2]))

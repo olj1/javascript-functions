@@ -1,6 +1,25 @@
-function seed() {}
+function seed(a,b,c) {
+  let newArray = [arguments[0],arguments[1],arguments[2]];
+  return console.log(newArray);
+}
 
-function same([x, y], [j, k]) {}
+function same([x, y], [j, k]) {
+  if (!arguments[0] || !arguments[1]) return;
+  let result;
+  let array1 = arguments[0];
+  let array2 = arguments[1];
+  array1.forEach((e1,i)=>array2.forEach(e2=>{  
+    if(e1.length > 1 && e2.length){
+       result = compare(e1,e2);
+    }else if(e1 !== e2 ){
+       result = false
+    }else{
+       result = true
+    }
+})
+)
+return result;
+}
 
 // The game state to search for `cell` is passed as the `this` value of the function.
 function contains(cell) {}
@@ -74,3 +93,6 @@ const startPatterns = {
   exports.startPatterns = startPatterns;
   exports.iterate = iterate;
   exports.main = main;
+
+  seed(1,2,3);
+  // console.log("same function: ", same([1,3],[1,2]))
